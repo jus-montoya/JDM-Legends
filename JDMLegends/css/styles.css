@@ -1,0 +1,770 @@
+/*
+  Full Name: Justine Montoya
+  Section: WD201
+  Activity: JDM Cars
+*/
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tablet {
+  display: none;
+}
+
+.mobile {
+  display: none;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 600px) and (max-width: 1280px) {
+
+  .desktop {
+    display: none;
+  }
+
+  main h3.tablet {
+    display: block;
+    font-size: 1.3em;
+    color: #ccc;
+    margin-bottom: 40px;
+    text-align: justify;
+    padding: 20px;
+  }
+
+  /* Logo styling */
+  .logo img {
+    display: block;
+    max-height: 120px;
+    margin-bottom: 10px;
+  }
+
+  /* Flex container for nav */
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 40px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85em;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  /* Tablet styles */
+  .car-grid {
+    gap: 30px;
+  }
+
+  .car-grid figure {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .car-feature img {
+    width: 100%;
+  }
+
+  /* Community Section */
+  .community-columns {
+    flex-direction: column;
+  }
+
+  .forum {
+    order: 1;
+  }
+
+  .buzz {
+    order: 2;
+  }
+
+  /* Container styles */
+  #container footer {
+  text-align: left;
+  padding: 10px;
+  background-color: #1c1c1c;
+  color: #aaa;
+  font-size: .9em;
+  }
+
+  
+
+  /* Footer tablet styles */
+  footer a {
+    color: #FFD700;
+    text-decoration: underline;
+  }
+
+  .social-icons img{
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-icons {
+    margin-top: 5px;
+    text-align: left;
+  }
+}
+
+/* End of tablet styles */
+
+/* Mobile styles */
+@media screen and (max-width: 599px) {
+  .nav-container {
+    background-color: #1c1c1c;
+    padding: 60px 8px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #1c1c1c;
+    padding: 8px 0;
+  }
+
+  .logo img {
+    display: block;
+    max-height: 36px;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.65em;
+    padding: 4px 6px;
+    white-space: nowrap;
+  }
+
+  nav a:hover {
+    color: #FFE976;
+  }
+
+  .main-wrapper {
+    padding-top: 40px;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  main h3.mobile {
+    display: block;
+    font-size: 1.1em;
+    color: #ccc;
+    margin: 16px 0;
+    text-align: justify;
+    padding: 0 16px;
+    line-height: 1.5;
+  }
+
+  .car-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0 16px;
+  }
+
+  .car-grid figure {
+    width: 100%;
+    max-width: 280px;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(63, 63, 63, 0.2);
+  }
+
+  .car-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .pic-text {
+    padding: 10px;
+    font-size: 0.95em;
+    color: #fff;
+    background-color: rgba(71, 12, 12, 0.445);
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .community-columns {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  .forum {
+    order: 1;
+  }
+
+  .buzz {
+    order: 2;
+  }
+
+  #container footer {
+    text-align: center;
+    padding: 16px;
+    background-color: #1c1c1c;
+    color: #aaa;
+    font-size: 0.85em;
+  }
+
+  footer a {
+    color: #FFD700;
+    text-decoration: underline;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+
+/* End of mobile styles */
+
+
+/* Print styles */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    font-family: Arial, sans-serif;
+  }
+
+  .nav-container,
+  header,
+  footer,
+  .explore-btn,
+  .social-icons {
+    display: none;
+  }
+
+  .main-wrapper {
+    padding: 0;
+  }
+
+  .car-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .car-grid figure {
+    border: none;
+    box-shadow: none;
+  }
+
+  .pic-text {
+    font-size: 1em;
+    color: #000;
+    background: none;
+    text-align: left;
+    padding: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h2, h3 {
+    color: #000;
+    text-align: left;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+/* General styles */
+
+body {
+  font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+#container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header and Navigation */
+header {
+  text-align: center;
+}
+
+header img {
+  max-width: 180px;
+}
+
+
+/* Flex container for logo and nav */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+}
+
+/* Logo styling */
+.logo img {
+  max-height: 150px;
+}
+
+/* Navigation menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 90px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #FFE976;
+}
+
+/* Main Content */
+.main-wrapper {
+  background-color: rgba(230, 0, 19, 0.3); 
+  width: 100%;
+  padding-top: 10px;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+
+main h2 {
+  font-size: 1.8em;
+  text-align: left;
+  color: #FFE976;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+main h3 {
+  font-size: 1.1em;
+  color: #ccc;
+  margin-bottom: 40px;
+  text-align: justify;
+  padding: 20px;
+}
+
+/* Car Grid */
+.car-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.car-grid figure {
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 500px;
+  box-shadow: 0 0 10px rgba(63, 63, 63, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.car-grid figure:hover {
+  transform: scale(1.05);
+}
+
+.car-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.car-grid figcaption {
+  padding: 12px;
+  background-color: rgba(71, 12, 12, 0.445);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Sections */
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 1.7em;
+  color: #FFE976;
+  margin-bottom: 20px;
+  text-align: left;
+  padding: 10px;
+}
+
+section h3 {
+  font-size: 1.3em;
+  color: #ccc;
+  margin-bottom: 20px;
+  text-align: justify;
+  padding: 20px;
+}
+
+section a {
+  color: #FFE976;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+/* Car Feature Section */
+
+.car-feature {
+  text-align: left;
+  margin: 40px;
+  margin-bottom: 60px;
+}
+
+.car-feature img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  border-radius: 9px;
+  box-shadow: 0 0 10px rgba(63, 63, 63, 0.2);
+}
+
+.car-feature h4 {
+  font-size: 1.8em;
+  color: #fff;
+  margin: 15px 0;
+}
+
+.car-feature ul {
+  list-style: none;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  font-size: 1.25em;
+  color: #fff;
+  margin: 20px;
+  text-align: justify;
+  padding: 10px;
+}
+
+.car-feature p {
+  font-size: 1.25em;
+  color: #fff;
+  margin: 20px;
+  text-align: justify;
+  padding: 10px;
+}
+
+.car-feature a {
+  font-size: 1.2em;
+  color: #FFE976;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Community Section */
+
+.community-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.community-columns .forum h3, .community-columns .buzz h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.forum, .buzz {
+  flex: 1;
+  background-color: #D9D9D9;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(63, 63, 63, 0.2);
+  text-align: left;
+}
+
+/* Forum and Buzz Styles */
+
+.forum h3{
+  color: #7D000A;
+  font-weight: bold;
+}
+
+.forum strong {
+  color: #C8AC18;
+}
+
+.forum p:nth-of-type(odd) {
+  margin-top: 0;
+  color: #6B6B6B;
+}
+
+.forum p:nth-of-type(even) {
+  margin-bottom: 20px;
+  color: #1c1c1c;
+}
+
+.forum button {
+  background-color: #F8BC3C;
+  color: #1a1a1a;
+  padding: 16px 32px;         
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.forum button:hover {
+  background-color: #e6c200;
+}
+
+.buzz h3 {
+  color: #4A4949;
+  margin-bottom: 20px;
+}
+
+.buzz p {
+  color: #000000;
+  margin: 9px 0;
+}
+
+.buzz img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.buzz-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.buzz-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.buzz-text p {
+  margin: 5px 0;
+  color: #1c1c1c;
+  margin: 0 20px 0 20px;
+}
+
+/* Explore Button */
+.explore-btn {
+  display: inline-block;
+  color: #FFE976;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.explore-btn:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section  */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  background-color: #D9D9D9;
+  color: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(63, 63, 63, 0.2);
+  text-align: center;
+}
+
+/* Heading */
+.container h2 {
+  font-size: 2em;
+  color: #7D000A;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  font-size: 1em;
+  border: 1.5px solid #000;
+  border-radius: 6px;
+  background-color: #D9D9D9;
+  color: #1c1c1c;
+  margin-bottom: 12px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  color: #1a1a1a;
+  font-size: 1.3em;
+  margin-bottom: 4px;
+}
+
+
+/* Send Button */
+form button {
+  background-color: #7D000A;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #a8002f;
+}
+
+/* Footer Text Below Form */
+.footer-text {
+  margin-top: 30px;
+  font-size: 1em;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Social Icons */
+.ftr-social-icons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.ftr-social-icons a img {
+  width: 40px;
+  height: 40px;
+  margin: 20px 10px;
+  transition: transform 0.3s ease;
+}
+
+.ftr-social-icons a img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #1c1c1c;
+  color: #aaa;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #FFD700;
+  text-decoration: none;
+  text-decoration: underline;
+}
+  
+
+.social-icons {
+  margin-top: 5px;
+}
+
+
+.social-icons img{
+  width: 30px;
+  height: 30px;
+  margin: 0 9px;
+}
+
